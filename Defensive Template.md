@@ -15,10 +15,10 @@ The following machines were identified on the network:
   - **Purpose**: Target Machine 
   - **IP Address**: 192.168.1.110
   
-- Target 2 
-  - **Operating System**: Linux
-  - **Purpose**: Target Machine 
-  - **IP Address**: 192.168.1.115
+- Capstone  
+  - **Operating System**: LINUX
+  - **Purpose**: Target
+  - **IP Address**: 192.168.1.105
 
 - Attacker Machine 
   - **Operating System**: Kali Linux 
@@ -29,7 +29,8 @@ The following machines were identified on the network:
   - **Operating System**: Linux 
   - **Purpose**: Monitoring network activity
   - **IP Address**: 192.168.1.100
-
+  
+![Network Topology](Screenshots/NetworkTopology.JPG)
 
 ### Description of Targets
 
