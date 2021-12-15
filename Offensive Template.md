@@ -74,4 +74,4 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   - `flag4 {715dea6c055b9fe3337544932f2941ce}
     - **Exploit Used** 
        - Used credentials from wp-config.php file for MYAQL database, I logged into MYSQL. Flags 3 and 4 were found in the wp_posts tabel in the MYAQL wordpress database   
- ![imag](Screenshots/Flag3and4.JPG)
+ ![image](Screenshots/Flag3and4.JPG)
