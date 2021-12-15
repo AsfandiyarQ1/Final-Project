@@ -8,7 +8,8 @@
 ### Exposed Services
 
 Nmap scan results for each machine reveal the below services and OS details:
-![Alt text]Screenshots/NmapScan.JPG
+
+![image](Screenshots/NmapScan.JPG "Nmap Scan Results")
 
 
 ```bash
