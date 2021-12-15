@@ -8,6 +8,8 @@
 ### Exposed Services
 
 Nmap scan results for each machine reveal the below services and OS details:
+![Alt text]Screenshots/NmapScan.JPG
+
 
 ```bash
 $ nmap -sV 192.168.1.110
