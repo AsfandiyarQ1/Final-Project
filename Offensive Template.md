@@ -12,7 +12,7 @@ Nmap scan results for each machine reveal the below services and OS details:
 ```bash
 $ nmap -sV 192.168.1.110
 
-![Alt text](Screenshots/NmapScan.JPG "Nmap Scan Results")
+![image](https://user-images.githubusercontent.com/86275942/146259782-9c0e58d6-4538-49d6-9e6d-01641d4bf664.png)
 
   Port 22/TCP Open SSH
   Port 80/TCP Open HTTP
