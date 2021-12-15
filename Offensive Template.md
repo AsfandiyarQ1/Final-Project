@@ -40,10 +40,13 @@ The following vulnerabilities were identified on each target:
 
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
 - Target 1
-  - `flag1{b9bbcb33e11b80be759c4e844862482d}`: _TODO: Insert `flag1.txt` hash value_
+  - `flag1{b9bbcb33e11b80be759c4e844862482d}`
     - **Exploit Used**
-      - used ssh to remote access target 1 and logged into micheal's account with an easy to guess password. 
-      - Usernam: michael
+      - Used WPScan to enumerate users on the target machine 
+   ![image](Screenshots/WPScan.JPG)
+   
+      - then used ssh to remote access target 1 and logged into micheal's account with an easy to guess password. 
+      - Username: michael
       - Password: michael 
       - Commands used: 
         - ssh michael@192.168.1.110 -p22
@@ -52,6 +55,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
         - cd var/www/html
         - ls
         - nano service.html
+    ![image](Screenshots/Flag1.JPG)
+    
   - `flag2 {fc3fd58dcdad9ab23faca6e9a36e581c}`
     - **Exploit Used**
       - Same as flag1. A flag2.txt file was found by snooping around in Micheal's account folders
@@ -60,7 +65,9 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
         - cd ..
         - ls
         - cat flag2.txt
+    ![image](Screenshots/Flag2.JPG)
   - `flag3 {afc01ab56b50591e7dccf93122770cd2} 
   - `flag4 {715dea6c055b9fe3337544932f2941ce}
     - **Exploit Used** 
        - Used credentials from wp-config.php file for MYAQL database, I logged into MYSQL. Flags 3 and 4 were found in the wp_posts tabel in the MYAQL wordpress database   
+    ![imag](Screenshots/Flag3and4.JPG)
