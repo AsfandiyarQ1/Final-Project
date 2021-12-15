@@ -35,6 +35,11 @@ The following vulnerabilities were identified on each target:
   - Weak Passwords 
   - Misconfiguration of priviledges 
 
+- [CVE-2021-28041 open SSH](https://nvd.nist.gov/vuln/detail/CVE-2021-28041)  
+- [CVE-2017-15710 Apache https 2.4.10](https://nvd.nist.gov/vuln/detail/CVE-2017-15710)
+- [CVE-2017-8779 exploit on open rpcbind port could lead to remote DoS](https://nvd.nist.gov/vuln/detail/CVE-2017-8779)  
+- [CVE-2017-7494 Samba NetBIOS](https://nvd.nist.gov/vuln/detail/CVE-2017-7494)  
+
 ### Exploitation
 
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
