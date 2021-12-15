@@ -11,7 +11,6 @@ Nmap scan results for each machine reveal the below services and OS details:
 
 ![image](Screenshots/NmapScan.JPG "Nmap Scan Results")
 
-
 ```bash
 $ nmap -sV 192.168.1.110
 
@@ -61,25 +60,27 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     
   - `flag2 {fc3fd58dcdad9ab23faca6e9a36e581c}`
     - **Exploit Used**
-      - Same as flag1. A flag2.txt file was found by snooping around in Micheal's account folders
-      - Commands used:
-        - cd ..
-        - cd ..
-        - ls
-        - cat flag2.txt
-        - 
+    - Same as flag1. A flag2.txt file was found by snooping around in Micheal's account folders
+    - Commands used:
+     - cd ..
+     - cd ..
+     - ls
+     - cat flag2.txt
+      
  ![image](Screenshots/Flag2.JPG)
  
-  - `flag3 {afc01ab56b50591e7dccf93122770cd2} 
-  - `flag4 {715dea6c055b9fe3337544932f2941ce}
+  - flag3 {afc01ab56b50591e7dccf93122770cd2} 
+  - flag4 {715dea6c055b9fe3337544932f2941ce}
     - **Exploit Used** 
     - Used credentials from wp-config.php file for MYSQL database, I logged into MYSQL. Flags 3 and 4 were found in the wp_posts tabel in the MYAQL wordpress database   
+ 
  ![image](Screenshots/Flag3and4.JPG)
  
  -Flag 4 can also also be foud using the following method
-    - Retrieve user credentials from database, crack password hash with John the Ripper and use Python to gain root privileges.
+   - Retrieve user credentials from database, crack password hash with John the Ripper and use Python to gain root privileges.
         - Once having gained access to the database credentials as Michael from the wp-config.php file, lifting username and password hashes using MySQL was next. 
         - These user credentials are stored in the wp_users table of the wordpress database. The usernames and password hashes were copied/saved to the Kali machine in a file called wp_hashes.txt.
+        
 ![MySQL Credentials](Screenshots/MYSQLDatabasePassword.JPG)
 
 ![MySQL Access](Screenshots/MYSQLDatabaseAcess.JPG)
@@ -95,6 +96,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
  - After dumping the password hashes into a wp_hashes.txt file onto the Kali machine, I used John the Ripper to crack steven's password
  - Command: `john wp_hashes.txt`
  - Once Steven’s password hash was cracked, the next thing to do was SSH as Steven. Then I used sudo -l to check for steven's priviledges which showed that he was allowed to run python commands with out credentials. 
+ - 
  ![Cracked Steven's Hash](Screenshots/JohnCrackedHashSteven.JPG)
  
  ![Steven's Priviledges](Screenshots/StevenPriviledges.png)
@@ -107,4 +109,5 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
                 - `cd /root`
                 - `ls`
                 - `cat flag4.txt`
+                
 ![Falg 4](Screenshots/flag4.png)
