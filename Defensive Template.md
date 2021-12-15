@@ -14,6 +14,7 @@ The following machines were identified on the network:
   - **Operating System**: Linux 
   - **Purpose**: Target Machine 
   - **IP Address**: 192.168.1.110
+  
 - Target 2 
   - **Operating System**: Linux
   - **Purpose**: Target Machine 
@@ -32,7 +33,6 @@ The following machines were identified on the network:
 
 ### Description of Targets
 
-
 The target of this attack was: `Target 1` (192.168.1.110).
 
 Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers. As such, the following alerts have been implemented:
@@ -43,6 +43,7 @@ Traffic to these services should be carefully monitored. To this end, we have im
 
 #### Name of Alert 1
 
+![Exessive HTTP Errors](Screenshots/ExessiveHTTPErrorsAlert.png)
 
 Exessive HTTP Errors is implemented as follows:
   - **Metric**: WHEN count () GROUPED OVER top 5 'http.response.status_code'
@@ -51,6 +52,9 @@ Exessive HTTP Errors is implemented as follows:
   - **Reliability**: 400 codes are client and server errors, and measuring by error codes 400 and above can filter out successful      responses, and alert when a large number of these errors occur. Therefore, this alert is higly reliable. 
 
 #### Name of Alert 2
+
+![HTTP Request Size Monitor](Screenshots/HTTPRequestSizeMonitor.png)
+
 HTTP Request Size Monitor is implemented as follows:
   - **Metric**: WHEN sum () OF http.request.bytes OVER all documents 
   - **Threshold**: IS ABOVE 3500 FOR THE LAST 1 minute 
@@ -58,6 +62,9 @@ HTTP Request Size Monitor is implemented as follows:
   - **Reliability**: Moderately reliable as it can produce false positives for large amounts of legitimate HTTP traffic.
 
 #### Name of Alert 3
+
+![CPU Usage Monitor](Screenshots/CPUusageAlert.png)
+
  CPU Usage Monitor is implemented as follows:
   - **Metric**: WHEN max() OF system.process.cpu.total.pct OVER all documents 
   - **Threshold**: IS ABOVE 0.5 FOR THE LAST 5 minutes
@@ -66,7 +73,7 @@ HTTP Request Size Monitor is implemented as follows:
 
 
 ### Suggestions for Going Further (Optional)
-_TODO_: 
+
 - Each alert above pertains to a specific vulnerability/exploit. Recall that alerts only detect malicious behavior, but do not stop it. For each vulnerability/exploit identified by the alerts above, suggest a patch. E.g., implementing a blocklist is an effective tactic against brute-force attacks. It is not necessary to explain _how_ to implement each patch.
 
 The logs and alerts generated during the assessment suggest that this network is susceptible to several active threats, identified by the alerts above. In addition to watching for occurrences of such threats, the network should be hardened against them. The Blue Team suggests that IT implement the fixes below to protect the network:
