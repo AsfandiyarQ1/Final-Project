@@ -43,7 +43,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   - `flag1{b9bbcb33e11b80be759c4e844862482d}`
     - **Exploit Used**
       - Used WPScan to enumerate users on the target machine 
-   ![image](Screenshots/WPScan.JPG)
+
+![image](Screenshots/WPScan.JPG)
    
       - then used ssh to remote access target 1 and logged into micheal's account with an easy to guess password. 
       - Username: michael
@@ -55,7 +56,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
         - cd var/www/html
         - ls
         - nano service.html
-    ![image](Screenshots/Flag1.JPG)
+   
+![image](Screenshots/Flag1.JPG)
     
   - `flag2 {fc3fd58dcdad9ab23faca6e9a36e581c}`
     - **Exploit Used**
@@ -65,9 +67,11 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
         - cd ..
         - ls
         - cat flag2.txt
-    ![image](Screenshots/Flag2.JPG)
+        - 
+ ![image](Screenshots/Flag2.JPG)
+ 
   - `flag3 {afc01ab56b50591e7dccf93122770cd2} 
   - `flag4 {715dea6c055b9fe3337544932f2941ce}
     - **Exploit Used** 
        - Used credentials from wp-config.php file for MYAQL database, I logged into MYSQL. Flags 3 and 4 were found in the wp_posts tabel in the MYAQL wordpress database   
-    ![imag](Screenshots/Flag3and4.JPG)
+ ![imag](Screenshots/Flag3and4.JPG)
