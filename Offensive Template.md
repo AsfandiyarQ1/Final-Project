@@ -12,13 +12,15 @@ Nmap scan results for each machine reveal the below services and OS details:
 ![image](Screenshots/NmapScan.JPG "Nmap Scan Results")
 
 ```bash
+
 $ nmap -sV 192.168.1.110
 
-  - Port 22/TCP Open SSH
-  - Port 80/TCP Open HTTP
-  - Port 111/TCP Open rcpbind
-  - Port 139/TCP Open netbios-ssn
-  - Port 445/TCP Open netbios-ssn
+ - Port 22/TCP Open SSH
+ - Port 80/TCP Open HTTP
+ - Port 111/TCP Open rcpbind
+ - Port 139/TCP Open netbios-ssn
+ - Port 445/TCP Open netbios-ssn
+ 
 ```
 
 This scan identifies the services below as potential points of entry:
