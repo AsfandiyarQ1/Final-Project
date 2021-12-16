@@ -13,8 +13,7 @@ Nmap scan results for each machine reveal the below services and OS details:
 
 ```bash
 
-$ nmap -sV 192.168.1.110
-
+- nmap -sV 192.168.1.110
  - Port 22/TCP Open SSH
  - Port 80/TCP Open HTTP
  - Port 111/TCP Open rcpbind
