@@ -46,16 +46,16 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 ![image](Screenshots/WPScan.JPG)
    
-      - then used ssh to remote access target 1 and logged into micheal's account with an easy to guess password. 
-      - Username: michael
-      - Password: michael 
-      - Commands used: 
-        - ssh michael@192.168.1.110 -p22
-        - cd ..
-        - cd ..
-        - cd var/www/html
-        - ls
-        - nano service.html
+- then used ssh to remote access target 1 and logged into micheal's account with an easy to guess password. 
+ - Username: michael
+ - Password: michael 
+ - Commands used: 
+   - ssh michael@192.168.1.110 -p22
+   - cd ..
+   - cd ..
+   - cd var/www/html
+   - ls
+   - nano service.html
    
 ![image](Screenshots/Flag1.JPG)
     
