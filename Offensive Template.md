@@ -90,12 +90,13 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     - use wordpress; 
     - show tables;
     - select * from wp_users;
+
 ![MySQL Hashes](Screenshots/MYSQLPasswordHashes.JPG)
 
  - After dumping the password hashes into a wp_hashes.txt file onto the Kali machine, I used John the Ripper to crack steven's password
  - Command: `john wp_hashes.txt`
  - Once Steven’s password hash was cracked, the next thing to do was SSH as Steven. Then I used sudo -l to check for steven's priviledges which showed that he was allowed to run python commands with out credentials. 
- - 
+ 
  ![Cracked Steven's Hash](Screenshots/JohnCrackedHashSteven.JPG)
  
  ![Steven's Priviledges](Screenshots/StevenPriviledges.png)
