@@ -76,17 +76,16 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
  
  ![image](Screenshots/Flag3and4.JPG)
  
- -Flag 4 can also also be foud using the following method
-   - Retrieve user credentials from database, crack password hash with John the Ripper and use Python to gain root privileges.
-        - Once having gained access to the database credentials as Michael from the wp-config.php file, lifting username and password hashes using MySQL was next. 
-        - These user credentials are stored in the wp_users table of the wordpress database. The usernames and password hashes were copied/saved to the Kali machine in a file called wp_hashes.txt.
+ - Flag 4 can also also be foud using the following method
+   - Use MySQl credentials in the wp-config file located on Micheal's account to log into MySQL. 
+   - User hashes were also discovered in the wp_users table of the wordpress database. The password hashes were then copied to the Kali machine in a file called wp_hashes.txt.
         
 ![MySQL Credentials](Screenshots/MYSQLDatabasePassword.JPG)
 
 ![MySQL Access](Screenshots/MYSQLDatabaseAcess.JPG)
 
 - Commands used:
-    - mysql -u root -p’R@v3nSecurity’ -h 127.0.0.1` 
+    - mysql -u root -p (password: R@v3nSecurity from the wp-config.php file on michael's account)
     - show databases;`
     - use wordpress;` 
     - show tables;`
